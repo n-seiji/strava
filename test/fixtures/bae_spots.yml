@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  ido: MyString
+  keido: MyString
+  time: 2019-06-03
+  photo: MyString
+  coment: MyString
+
+two:
+  name: MyString
+  ido: MyString
+  keido: MyString
+  time: 2019-06-03
+  photo: MyString
+  coment: MyString

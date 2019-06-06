@@ -1,0 +1,2 @@
+class Baespot < ApplicationRecord
+end

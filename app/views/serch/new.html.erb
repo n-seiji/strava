@@ -1,0 +1,34 @@
+<h<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel = "stylesheet"
+ type = "text/css"
+ href = "aoiro.css">
+ <script type="text/javascript" src="kensaku.js">
+ </script>
+
+  <title>景色マン検索画面</title>
+  </head>
+
+  <body>
+    <h1>検索</h1>
+    <p>地図上から</p>
+    <div id="map" style="width:400px; height:300px"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHgtnD1OXzaYX8XLCY_sryg0pmm61cCyU&callback=initMap"></script>
+
+    <h2>映えスポットの絞り込み</h2>
+    <form method="POST" action="mitei.cgi">
+      詳細検索: <input type="text" name="keyword" size="20">
+       <input type="submit" value="検索"><br>
+      <input type="reset" value="条件をクリア">
+    </form><br>
+   <form method="POST" action="/registration/new">
+     <input type="submit" value="自分のオススメスポットを登録！！">
+   </form>
+   <h2><a href="/">TOPに戻る</a></h2>
+  </body>

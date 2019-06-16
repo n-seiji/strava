@@ -22,7 +22,7 @@
  .top{
  weight: 100%;
  height:500px;
- background:url('baetop.jpg');
+ background-image: url("baetop.jpg");
  background-size: cover;
  }
 

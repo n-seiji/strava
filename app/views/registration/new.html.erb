@@ -27,7 +27,7 @@
 
     <label>氏名？<br></label>
       <div>
-      <%= f.text_field :coment, id: 'baespot_coment'  %>
+      <%= f.text_field :name, id: 'baespot_name'  %>
     </div>
     <label>撮影場所は？<br>
       <div>
@@ -35,7 +35,7 @@
     </div>
     <label>題名は？<br></label>
     <div>
-      <%= f.text_field :name, id: 'baespot_name' %>
+      <%= f.text_field :time, id: 'baespot_time' %>
     </div>
 
     <label>最高の写真！<br></label>
@@ -50,10 +50,6 @@
     <div>
       <%= f.label :keido %>
       <%= f.text_field :keido, id: 'baespot_keido' %>
-    </div>
-    <div>
-      <%= f.label :time %>
-      <%= f.text_field :time, id: 'baespot_time' %>
     </div>
 
       <%= f.submit %>

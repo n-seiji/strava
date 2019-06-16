@@ -12,13 +12,14 @@
 //= require jquery
 //= require rails-ujs
 //= require activestorage
+//= require jquery.turbolinks
 //= require turbolinks
 //= require_tree .
 
 document.addEventListener('turbolinks:load', function initialize() {
  var Marker;
  var map;
- var latlng = new google.maps.LatLng(35.658704,139.745408);
+ var latlng = new google.maps.LatLng(36.08677091624002,140.10645429768044);
  var opts = {
   zoom: 15,
   center: latlng,

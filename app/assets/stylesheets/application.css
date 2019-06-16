@@ -76,7 +76,7 @@
 
   .ue a {/*aタグを画像の真ん中に*/
     position: absolute;
-    top: 110%;
+    top: 150%;
     left: 50%;
     -ms-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
@@ -92,7 +92,7 @@
     .sita a {
 
     position: absolute;
-    top: 130%;
+    top: 170%;
     left: 50%;
     -ms-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
@@ -210,7 +210,7 @@
 
   .copyright {
     position: absolute;
-    top: 130%;
+    top: 170%;
     left: 90%;
     margin: 2px 0 0;
     padding: 9px 0 0;

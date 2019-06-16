@@ -9,12 +9,13 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+//= require jquery
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-function initialize() {
+
+$(document).on('turbolinks:load', function initialize() {
  var Marker;
  var map;
  var latlng = new google.maps.LatLng(35.658704,139.745408);
@@ -75,4 +76,4 @@ function initialize() {
   document.getElementById('id_keido').innerHTML = keido;
   document.getElementById('id_level').innerHTML = level;
  };
-};
+});

@@ -76,7 +76,7 @@
 
   .ue a {/*aタグを画像の真ん中に*/
     position: absolute;
-    top: 130%;
+    top: 110%;
     left: 50%;
     -ms-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
@@ -92,7 +92,7 @@
     .sita a {
 
     position: absolute;
-    top: 150%;
+    top: 130%;
     left: 50%;
     -ms-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
@@ -134,9 +134,8 @@
    }
    .sitaa a {
 
-   position: absolute;
-   top: 150%;
-   left: 50%;
+   position:relative;
+   top: 60vh;
    -ms-transform: translate(-50%,-50%);
    -webkit-transform: translate(-50%,-50%);
    transform: translate(-50%,-50%);
@@ -161,8 +160,8 @@
   box-sizing: border-box;
   }
   .cp_cssslider {
-  width: 300px;
-  padding-top: 200px; /* 画像の高さ */
+  width: 500px;
+  padding-top: 400px; /* 画像の高さ */
   position: relative;
   margin: 2em auto;
   text-align: center;
@@ -180,7 +179,7 @@
   }
   /* サムネイル */
   .cp_cssslider label {
-  margin: 15px 5px 0 5px;
+  margin: 10px 5px 0 5px;
   border: 2px solid #ffffff;
   display: inline-block;
   cursor: pointer;
@@ -210,11 +209,11 @@
 
 
   .copyright {
-    position:relative;
+    position: absolute;
+    top: 130%;
+    left: 90%;
     margin: 2px 0 0;
     padding: 9px 0 0;
-    border-top: 2px solid #e6e6e5;
     font-size: 10px;
     font-family: Helvetica Neue, Helvetica, Arial, "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-    text-align: center;
     /*letter-spacing: 0.1em;*/ }

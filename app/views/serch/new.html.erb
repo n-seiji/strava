@@ -7,8 +7,7 @@
 <meta http-equiv="Content-Script-Type" content="text/javascript">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHgtnD1OXzaYX8XLCY_sryg0pmm61cCyU&callback=initMap"></script>
- <script type="text/javascript" src="maptest1.js">
- </script>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   <title>BAE検索画面</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>

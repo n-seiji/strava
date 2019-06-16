@@ -1,0 +1,26 @@
+<!--お試し-->
+<meta http-equiv="content-type" charset="utf-8">
+<html>
+  <body>
+    <h2>映えスポットを登録!!</h2>
+    <br><br>
+    写真のアップロード
+    <form enctype="multipart/form-data"
+    action="./ex1/up.php" method="post" target="_blank">
+      <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+      <input name="userfile" type="file">
+      &nbsp <input type="submit" value="ファイル送信">
+    </form>
+    <form method="POST" action="mitei.cgi">
+      店名<br>
+      <input type="text" name="namae" size="20"><br>
+      ここがオススメ！<br> 
+      <!-- <input type="text" name="osusume" rows="10" size="200"><br> -->
+      <textarea name="example" cols="50" rows="10"></textarea>
+      <input type="submit" value="登録"><br>
+    </form>
+    <form method="POST" action="serch.html">
+      <input type="submit" value="近くの映えスポットを検索">
+    </form>
+  </body>
+</html>

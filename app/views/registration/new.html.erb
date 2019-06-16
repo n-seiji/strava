@@ -1,62 +1,86 @@
-<!--お試し-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHgtnD1OXzaYX8XLCY_sryg0pmm61cCyU&callback=initMap"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="maptest1.js">
+</script>
 
-<meta http-equiv="content-type" charset="utf-8">
-<html>
-  <body>
-    <h2>映えスポットを登録!!</h2>
-    <br><br>
-    写真のアップロード
-    <form enctype="multipart/form-data"
-    action="./ex1/up.php" method="post" target="_blank">
-      <input type="hidden" name="MAX_FILE_SIZE" value="100000">
-      <input name="userfile" type="file">
-      &nbsp <input type="submit" value="ファイル送信">
-    </form>
-    <form method="POST" action="mitei.cgi">
-      題名<br>
-      <input type="text" name="namae" size="20"><br>
-      ここがオススメ！<br>
-      <!-- <input type="text" name="osusume" rows="10" size="200"><br>-->
+  <title>BAE投稿画面</title>
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
 
+  <body  onload="initialize()">
 
-      <textarea name="example" cols="50" rows="10"></textarea>
-      <input type="submit" value="登録"><br>
-    </form>
-    <form method="POST" action="/serch/new">
-      <input type="submit" value="近くの映えスポットを検索">
-    </form>
-    <h2><a href="/">TOPに戻る</a></h2>
+    <div class="top">
+      <div class="title">
+     <div class="tatoe">
+      <h1>Submit</h1>
+
+    <!--<h1>/registration/new</h1>-->
+    <!--<p>Find me in app/views/registration/new.html.erb</p>-->
+    <%= form_with model: Baespot.new , url: {action: :create}, local: true do |f| %>
+
+    <label>氏名？<br></label>
+      <div>
+      <%= f.text_field :coment, id: 'baespot_coment'  %>
+    </div>
+    <label>撮影場所は？<br>
+      <div>
+      <%= f.text_field :coment, id: 'baespot_coment'  %>
+    </div>
+    <label>題名は？<br></label>
+    <div>
+      <%= f.text_field :name, id: 'baespot_name' %>
+    </div>
+
+    <label>最高の写真！<br></label>
+      <div>
+      <%= f.file_field :photo, id: 'baespot_photo' %>
+    </div>
+
+    <div>
+      <%= f.label :ido %>
+      <%= f.text_field :ido, id: 'baespot_ido' %>
+    </div>
+    <div>
+      <%= f.label :keido %>
+      <%= f.text_field :keido, id: 'baespot_keido' %>
+    </div>
+    <div>
+      <%= f.label :time %>
+      <%= f.text_field :time, id: 'baespot_time' %>
+    </div>
+
+      <%= f.submit %>
+      <% end %>
+
+      <p>Google Maps v3 APIを使ったサンプル 地図座標位置の取得</p>
+      地図上でクリックで座標・住所の取得
+      <table style="width:600px;border:0;" >
+      <tr style="background-color:#dddddd;">
+      <th style="width:120px">項目</th>
+      <th>情報</th></tr>
+      <tr><td>緯度</td><td id="id_ido"></td></tr>
+      <tr><td>経度</td><td id="id_keido"></td></tr>
+      <tr><td>ズームレベル</td><td id="id_level"></td></tr>
+      <tr><td>住所</td><td id="id_address"></td></tr>
+      </table>
+      <div id="map_canvas" style="width:600px; height:300px"></div>
+
+      <br>
+      <div class="ue">
+       <h2><a href="/serch/new">Searchへ</a></h2>
+     </div>
+     <div class="sita">
+       <h2><a href="/">TOPに戻る</a></h2>
+     </div>
+     </div>
+   </div>
+  </div>
   </body>
 </html>
-
-
-<!--<h1>/registration/new</h1>-->
-<!--<p>Find me in app/views/registration/new.html.erb</p>-->
-<%= form_with model: Baespot.new , url: {action: :create}, local: true do |f| %>
-<div>
- <%= f.label :name %>
- <%= f.text_field :name, id: 'baespot_name' %>
-</div>
-<div>
-<%= f.label :ido %>
-<%= f.text_field :ido, id: 'baespot_ido' %>
-</div>
-<div>
-<%= f.label :keido %>
-<%= f.text_field :keido, id: 'baespot_keido' %>
-</div>
-<div>
-<%= f.label :time %>
-<%= f.text_field :time, id: 'baespot_time' %>
-</div>
-<div>
-<%= f.label :photo %>
-<%= f.text_field :photo, id: 'baespot_photo' %>
-</div>
-<div>
-<%= f.label :coment %>
-<%= f.text_field :coment, id: 'baespot_coment' %>
-</div>
-
-<%= f.submit %>
-<% end %>

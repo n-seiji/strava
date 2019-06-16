@@ -1,0 +1,62 @@
+<!--お試し-->
+
+<meta http-equiv="content-type" charset="utf-8">
+<html>
+  <body>
+    <h2>映えスポットを登録!!</h2>
+    <br><br>
+    写真のアップロード
+    <form enctype="multipart/form-data"
+    action="./ex1/up.php" method="post" target="_blank">
+      <input type="hidden" name="MAX_FILE_SIZE" value="100000">
+      <input name="userfile" type="file">
+      &nbsp <input type="submit" value="ファイル送信">
+    </form>
+    <form method="POST" action="mitei.cgi">
+      題名<br>
+      <input type="text" name="namae" size="20"><br>
+      ここがオススメ！<br>
+      <!-- <input type="text" name="osusume" rows="10" size="200"><br>-->
+
+
+      <textarea name="example" cols="50" rows="10"></textarea>
+      <input type="submit" value="登録"><br>
+    </form>
+    <form method="POST" action="/serch/new">
+      <input type="submit" value="近くの映えスポットを検索">
+    </form>
+    <h2><a href="/">TOPに戻る</a></h2>
+  </body>
+</html>
+
+
+<!--<h1>/registration/new</h1>-->
+<!--<p>Find me in app/views/registration/new.html.erb</p>-->
+<%= form_with model: Baespot.new , url: {action: :create}, local: true do |f| %>
+<div>
+ <%= f.label :name %>
+ <%= f.text_field :name, id: 'baespot_name' %>
+</div>
+<div>
+<%= f.label :ido %>
+<%= f.text_field :ido, id: 'baespot_ido' %>
+</div>
+<div>
+<%= f.label :keido %>
+<%= f.text_field :keido, id: 'baespot_keido' %>
+</div>
+<div>
+<%= f.label :time %>
+<%= f.text_field :time, id: 'baespot_time' %>
+</div>
+<div>
+<%= f.label :photo %>
+<%= f.text_field :photo, id: 'baespot_photo' %>
+</div>
+<div>
+<%= f.label :coment %>
+<%= f.text_field :coment, id: 'baespot_coment' %>
+</div>
+
+<%= f.submit %>
+<% end %>

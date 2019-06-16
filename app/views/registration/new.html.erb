@@ -11,7 +11,7 @@
 </script>
 
   <title>BAE投稿画面</title>
-   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'load' %>
+   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 </head>
 
   <body  onload="initialize()">
@@ -55,16 +55,13 @@
       <%= f.submit %>
       <% end %>
 
-      <p>Google Maps v3 APIを使ったサンプル 地図座標位置の取得</p>
-      地図上でクリックで座標・住所の取得
+      地図上でクリックで座標の取得
       <table style="width:600px;border:0;" >
       <tr style="background-color:#dddddd;">
       <th style="width:120px">項目</th>
       <th>情報</th></tr>
       <tr><td>緯度</td><td id="id_ido"></td></tr>
       <tr><td>経度</td><td id="id_keido"></td></tr>
-      <tr><td>ズームレベル</td><td id="id_level"></td></tr>
-      <tr><td>住所</td><td id="id_address"></td></tr>
       </table>
       <div id="map_canvas" style="width:600px; height:300px"></div>
 

@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).on('turbolinks:load', function initialize() {
+document.addEventListener('turbolinks:load', function initialize() {
  var Marker;
  var map;
  var latlng = new google.maps.LatLng(35.658704,139.745408);
@@ -54,21 +54,7 @@ $(document).on('turbolinks:load', function initialize() {
    Marker.getPosition().lng(),map.getZoom());
   })
  })
-//ジオコーディング
- function geocode(){  var geocoder = new google.maps.Geocoder();
-  geocoder.geocode({ 'location': Marker.getPosition()},
-     function(results, status) {
-   if (status == google.maps.GeocoderStatus.OK && results[0]){
-     document.getElementById('id_address').innerHTML =
-         results[0].formatted_address.replace(/^日本, /, '');
-   }else{
-     document.getElementById('id_address').innerHTML =
-       "Geocode 取得に失敗しました";
-    alert("Geocode 取得に失敗しました reason: "
-           + status);
-   }
-  });
- }
+
 
 //HTMLtagを更新
  function infotable(ido,keido,level){

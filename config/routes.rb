@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'serch/new'
   get 'registration/new'
   get 'bae/web_home'
+  get 'serch/show_1'
   root 'bae#web_home'
   post 'serch/new'
   post 'registration/new'

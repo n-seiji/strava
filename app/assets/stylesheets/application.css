@@ -202,6 +202,7 @@
   .cp_cssslider input[name='cp_switch'] ~ img {
   opacity: 0;
   }
+
   .cp_cssslider input[name='cp_switch']:checked + label + img {
   opacity: 1;
   }
